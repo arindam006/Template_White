@@ -1,0 +1,31 @@
+.content_wrapper {
+}
+.third-column {
+    float: left;
+    min-height: 10px;
+    width: 30%;
+}
+.half-column {
+    width: 48%;
+}
+.half-column.left-column {
+    float: left;
+}
+.half-column.right-column {
+    float: right;
+    margin-right: 0;
+}
+.center-column {
+    margin: 0 auto;
+    width: 82%;
+}
+.upgrade.half-column .fieldset {
+    min-height: 145px;
+}
+.center {
+    text-align: center;
+}
+.clean {
+    margin: 0;
+    padding: 0;
+}

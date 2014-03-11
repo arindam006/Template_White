@@ -1,0 +1,298 @@
+/* sections - 
+ * 1. fonts
+ * 2. html alamants / tags applied globally
+ * 3. classes, layout wise / css path wise
+ * 4. classes that can be used with any other element or classes to fix / modify the layout
+ * 5. id
+ * /
+
+/* 1. fonts */
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: "ProximaNova";
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "ProximaNova";
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "ProximaNova";
+    font-style: normal;
+}
+/* end */
+
+/* 2. html alamants / tags applied globally */
+body, input, textarea, select, button, .normal {
+    color: #3D464D;
+    font-family: "Open Sans","lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+}
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    min-height: 100%;
+    padding: 0;
+}
+a, a * {
+    cursor: pointer;
+    outline: medium none;
+}
+a {
+    color: #2895F1;
+    text-decoration: none;
+}
+a img {
+    border: 0 none;
+}
+p, h1, h2, h3, h4, h5 {
+    line-height: 1.6em;
+    margin: 0 0 1em;
+}
+h1 {
+    font-size: 18pt;
+    font-weight: normal;
+    margin: 10px 0;
+}
+h2 {
+    font-size: 10pt;
+    margin-bottom: 4px;
+    padding-bottom: 10px;
+    padding-top: 3px;
+}
+h3 {
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+}
+h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 0.5em;
+}
+h5 {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 0 0.5em;
+}
+input[type="password"] {
+    font-family: arial,sans-serif;
+}
+button {
+    border: 0 solid;
+    outline: 0 none;
+    overflow: visible;
+    width: auto;
+}/* same as input[type="button"] */
+input[type="button"]  {
+    border: 0 solid;
+    outline: 0 none;
+    overflow: visible;
+    width: auto;
+}/* same as button */
+form {
+    margin: 0;
+    padding: 0;
+}
+label {
+    cursor: default;
+}
+noscript {
+    font-size: 13px;
+    font-weight: normal;
+}
+/* end */
+
+/* 3. classes, layout wise / css path wise */
+.content_wrapper {
+}
+.header {
+    border-bottom: 1px solid #4189CD;
+    height: 73px;
+    margin: 0 auto;
+    padding: 19px 0;
+    width: 100%;
+	-moz-box-sizing: border-box;
+    background: none repeat scroll 0 0 #FFFFFF;
+	position:fixed;
+	z-index:10;
+}
+.header .header_content {
+}
+.header  .mob_sub_menu_icon {
+	display: none;
+}
+.header .header_logo_container {
+    display: inline-block;
+    vertical-align: middle;
+	padding-left: 30px;
+}
+.header div.header_logo_container a img {
+	width: 36px;
+}
+.header .header_account_container {
+    margin-top: 8px;
+	font-size: 13x;
+    -moz-user-select: none;
+    float: right;
+    font-size: 13px;
+}
+.header .header_account_container .nav {
+    list-style: none outside none;
+    margin-top: 0;
+}
+.header .header_account_container .nav li {
+    float: left;
+    list-style: none outside none;
+    margin-left: 10px;
+    position: relative;
+    z-index: 100;
+}
+.header .header_account_container .nav li.notification {
+    padding: 0 20px 0 20px;
+}
+.header .header_account_container .nav li.notification {
+    padding: 0 8px 0 20px;
+}
+.header .header_account_container .nav li.notification a {
+    padding: 0 6px 0 8px;
+}
+.header .header_account_container .nav li.notification a img {
+    width: 18px;
+	margin-top: -5px;
+}
+.header .header_account_container .nav li.notification a span {
+	font-weight: bold;
+	padding-left: 3px;
+	vertical-align: super;
+}
+.header .header_account_container .nav li.user {
+    padding-right: 15px;
+}
+.header .header_account_container .nav li.user a img {
+    margin-top: -5px;
+}
+.header .header_account_container .nav li .link {
+    float: left;
+    margin: 0;
+}
+.header .header_account_container .nav li.user_account_menu_icon{
+	display: none;
+}
+.header .header_account_container .nav li.mob_main_menu_icon {
+	display: none;
+}
+.header .header_account_container .nav li.mob_main_menu_icon a {
+	display: block;
+}
+.header .header_account_container .nav li.mob_main_menu_icon div {
+	display: none;
+}
+#content {
+	
+}
+.footer {
+	clear: both;
+    padding: 0;
+}
+.footer .footer_content
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:70%;
+}
+.footer .footer_top_margin {
+	height: 6em;
+}
+.footer .footer_border {
+	border-top: 1px solid #4189CD;
+    height: 0;
+    width: 100%;
+}
+.footer .clear {
+	clear: both;
+}
+.footer .footer_col {
+	float: left;
+    margin: 0 45px 20px 15px;
+    max-width: 200px;
+}
+.footer .footer_col ul {
+	margin: 0;
+    padding: 0;
+}
+.footer .footer_col ul li {
+	font-size: 11px;
+    list-style: none outside none;
+    padding: 0;
+	border: 0;
+	height: 15px;
+}
+.footer .footer_col ul li a {
+	color: #668BAE;
+    font-size: 13px;
+}
+.footer .footer_col ul li.header {
+    margin: 25px 0 5px 0;
+	color: #767676;
+    font-size: 21px;
+	height: 25px;
+	position: absolute;
+	z-index: auto;
+	width: auto;
+	position: static;
+}
+.content {
+	padding-top: 72px;
+	min-height: 50%;
+}
+/* end */
+
+/* 4. classes that can be used with any other element or classes to fix / modify the layout */
+.third-column {
+    float: left;
+    min-height: 10px;
+    width: 30%;
+}
+.half-column {
+    width: 48%;
+}
+.half-column.left-column {
+    float: left;
+}
+.half-column.right-column {
+    float: right;
+    margin-right: 0;
+}
+.center-column {
+    margin: 0 auto;
+    width: 82%;
+}
+.upgrade.half-column .fieldset {
+    min-height: 145px;
+}
+.center {
+    text-align: center;
+}
+.clean {
+    margin: 0;
+    padding: 0;
+}
+/* end */
