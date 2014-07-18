@@ -100,6 +100,7 @@ var Layout = new function () {
 		document.body.onclick = function (e) {
 			var clicked_element = e.target;
 			var clicked_element_parent = clicked_element.parentNode;
+			var clicked_element_grandparent = clicked_element_parent.parentNode;
 			
 			var Header_HeaderResponsive_User_Account_Menu_Icon = context.getElementByCssSelector(context.Header_HeaderResponsive_User_Account_Menu_Icon);
 			var Header_HeaderResponsive_User_Account_Menu_Icon_DropDown = context.getElementByCssSelector(context.Header_HeaderResponsive_User_Account_Menu_Icon_DropDown);
@@ -116,7 +117,7 @@ var Layout = new function () {
 			var HeaderResponsive_Right_Navigation_Menu_Icon = context.getElementByCssSelector(context.HeaderResponsive_Right_Navigation_Menu_Icon);
 			var HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown = context.getElementByCssSelector(context.HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown);
 			
-			if (clicked_element === Header_HeaderResponsive_User_Account_Menu_Icon || clicked_element_parent === Header_HeaderResponsive_User_Account_Menu_Icon || clicked_element_parent.parentNode === Header_HeaderResponsive_User_Account_Menu_Icon){
+			if (clicked_element === Header_HeaderResponsive_User_Account_Menu_Icon || clicked_element_parent === Header_HeaderResponsive_User_Account_Menu_Icon || clicked_element_grandparent === Header_HeaderResponsive_User_Account_Menu_Icon){
 				var display_status = context.getComputedStyle(Header_HeaderResponsive_User_Account_Menu_Icon_DropDown, 'display');
 				if (display_status === 'block') {
 					Header_HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
@@ -155,7 +156,7 @@ var Layout = new function () {
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 				}
 			}
-			else if (clicked_element === HeaderResponsive_Left_Navigation_Menu_Icon || clicked_element_parent === HeaderResponsive_Left_Navigation_Menu_Icon){
+			else if (clicked_element === HeaderResponsive_Left_Navigation_Menu_Icon || clicked_element_parent === HeaderResponsive_Left_Navigation_Menu_Icon || clicked_element_grandparent === HeaderResponsive_Left_Navigation_Menu_Icon){
 				var display_status = context.getComputedStyle(HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown, 'display');
 				if (display_status === 'block') {
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
@@ -168,7 +169,7 @@ var Layout = new function () {
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 				}
 			}
-			else if (clicked_element === HeaderResponsive_Right_Navigation_Menu_Icon || clicked_element_parent === HeaderResponsive_Right_Navigation_Menu_Icon){
+			else if (clicked_element === HeaderResponsive_Right_Navigation_Menu_Icon || clicked_element_parent === HeaderResponsive_Right_Navigation_Menu_Icon || clicked_element_grandparent === HeaderResponsive_Right_Navigation_Menu_Icon){
 				var display_status = context.getComputedStyle(HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown, 'display');
 				if (display_status === 'block') {
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
@@ -188,6 +189,8 @@ var Layout = new function () {
 				HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 				HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 			}
+			console.log(clicked_element);
+			console.log(clicked_element_parent);
 		};
     };
     
