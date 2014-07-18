@@ -1,6 +1,6 @@
 .header {
     border-bottom: 1px solid #4189CD;
-    height: 73px;
+    height: 38px;
     margin: 0 auto;
     padding: 19px 0;
     width: 100%;
@@ -76,9 +76,10 @@
 	width: 150px;
 	display: none;
 }
-.header .header_account_container .nav li.notification a.notification_link:hover + div.notification_dropdown {
+/* Triggered by JavaScript, remove block comments below if JavaScript is not being used */
+/*.header .header_account_container .nav li.notification a.notification_link:hover + div.notification_dropdown {
 	display: block;
-}
+}*/
 .header .header_account_container .nav li.notification div.messages_dropdown {
 	position: absolute;
 	margin: 25px 0;
@@ -89,9 +90,10 @@
 	width: 150px;
 	display: none;
 }
-.header .header_account_container .nav li.notification a.messages_link:hover + div.messages_dropdown {
+/* Triggered by JavaScript, remove block comments below if JavaScript is not being used */
+/*.header .header_account_container .nav li.notification a.messages_link:hover + div.messages_dropdown {
 	display: block;
-}
+}*/
 .header .header_account_container .nav li.user_account_menu_icon {
     display: inline-block;
 	padding: 0 15px 0 0;
@@ -113,9 +115,10 @@
 	width: 150px;
 	display: none;
 }
-.header .header_account_container .nav li.user_account_menu_icon:hover > div.user_account_dropdown {
+/* Triggered by JavaScript, remove block comments below if JavaScript is not being used */
+/*.header .header_account_container .nav li.user_account_menu_icon:hover > div.user_account_dropdown {
 	display: block;
-}
+*/
 
 .header .header_account_container .nav li .link {
     float: left;
