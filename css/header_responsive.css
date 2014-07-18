@@ -17,7 +17,7 @@
 	border: 2px solid #4189CD;
 	background: #FFFFFF;
 	z-index: 10;
-	width: 120px;
+	width: 180px;
 	float: left;
 	position: absolute;
 }
@@ -62,12 +62,13 @@
 	width: 24px;
 }
 .header .header_account_container .nav li.mob_main_menu_icon div.main_menu_mobile_dropdown {
-	margin: 10px 0;
+	margin: 33px 0 0 -160px;
 	border: 2px solid #4189CD;
 	background: #FFFFFF;
 	z-index: 10;
-	width: 120px;
+	width: 180px;
 	float: right;
+	position: absolute;
 }
 /* Triggered by JavaScript, remove block comments below if JavaScript is not being used */
 /*.header .header_account_container .nav li.mob_main_menu_icon:hover > div.main_menu_mobile_dropdown {
