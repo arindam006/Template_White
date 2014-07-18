@@ -48,22 +48,15 @@ var Layout = new function () {
 		context.width = window.innerWidth; // in px
 		context.height = window.innerHeight; // in px
 		
-		console.log("context.responsiveWidth - " + context.responsiveWidth);
-		console.log("context.deviceType - " + context.deviceType);
-		console.log("context.width - " + context.width);
-		console.log("context.height - " + context.height);
-		console.log("_______________________________________________________");
         if (context.width < context.responsiveWidth) context.deviceType = "unsupported";
 		else if (context.width <= context.desktopWidth) context.deviceType = "mobile";
 		else context.deviceType = "desktop";
-		console.log("context.responsiveWidth - " + context.responsiveWidth);
-		console.log("context.deviceType - " + context.deviceType);
-		console.log("context.width - " + context.width);
-		console.log("context.height - " + context.height);
-		console.log("_______________________________________________________");
-		//console.log("(context.width < context.responsiveWidth)");
-		//console.log((context.width < context.responsiveWidth));
-		console.log("_______________________________________________________");
+		
+		//console.log("context.responsiveWidth - " + context.responsiveWidth);
+		//console.log("context.deviceType - " + context.deviceType);
+		//console.log("context.width - " + context.width);
+		//console.log("context.height - " + context.height);
+		//console.log("_______________________________________________________");
 		
 		if (typeof context.pageUrl === 'undefined' || context.pageUrl === null || context.pageUrl === "") {
 			document.body.innerHTML = "<p class='center'>" + context.MSG_LAYOUT_REG_FAILED + context.MSG_GO_BCAK_OR_RETRY + "</p>";
@@ -189,8 +182,8 @@ var Layout = new function () {
 				HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 				HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 			}
-			console.log(clicked_element);
-			console.log(clicked_element_parent);
+			//console.log("clicked_element" + clicked_element);
+			//console.log("clicked_element_parent" + clicked_element_parent);
 		};
     };
     
@@ -219,5 +212,5 @@ var Layout = new function () {
 
 };
 
-console.log("context - " + Layout.Inintialize());
-console.log("DeviceType - " + Layout.GetDeviceType());
+//console.log("context - " + Layout.Inintialize());
+//console.log("DeviceType - " + Layout.GetDeviceType());
