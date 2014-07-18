@@ -1,0 +1,75 @@
+@media only screen and (max-width: 960px) {
+
+.header .header_logo_container {
+	padding-left: 15px;
+}
+.header div.mob_sub_menu_icon {
+	height: 40px;
+	position absolute;
+	display: inline-block;
+}
+.header div.mob_sub_menu_icon a img {
+	display: inline-block;
+}
+.header div.mob_sub_menu_icon div.sub_menu_dropdown {
+	display: none;
+	margin: 10px 0;
+	border: 2px solid #4189CD;
+	background: #FFFFFF;
+	z-index: 10;
+	width: 120px;
+	float: left;
+	position: absolute;
+}
+.header div.mob_sub_menu_icon:hover > div.sub_menu_dropdown {
+	display: block;
+}
+.header div.mob_sub_menu_icon {
+	width: 24px;
+	margin-top: 5px;
+}
+.header .header_logo_container {
+    margin-top: -10px;
+}
+.header .header_account_container .nav li.notification {
+	display: none;
+}
+.header .header_account_container .nav li.user_account_menu_icon a.desktop_link {
+	display: none;
+}
+.header .header_account_container .nav li.user_account_menu_icon a.mobile_link{
+	display: block;
+}
+.header .header_account_container .nav li.user_account_menu_icon:hover {
+	width: 24px;
+}
+.header .header_account_container .nav li.user_account_menu_icon a img{
+	width: 24px;
+}
+.header .header_account_container .nav li.user_account_menu_icon div.user_account_dropdown {
+	margin: 34px -80px;
+}
+.header .header_account_container .nav li.mob_main_menu_icon {
+	display: inline-block;
+	padding: 0 15px 0 0;
+	vertical-align: middle;
+}
+.header .header_account_container .nav li.mob_main_menu_icon a img {
+	width: 24px;
+}
+.header .header_account_container .nav li.mob_main_menu_icon:hover {
+	width: 24px;
+}
+.header .header_account_container .nav li.mob_main_menu_icon div.main_menu_mobile_dropdown {
+	margin: 10px 0;
+	border: 2px solid #4189CD;
+	background: #FFFFFF;
+	z-index: 10;
+	width: 120px;
+	float: right;
+}
+.header .header_account_container .nav li.mob_main_menu_icon:hover > div.main_menu_mobile_dropdown {
+	display: block;
+}
+
+}
