@@ -129,7 +129,7 @@ var Layout = new function () {
 					Header_Notification_Icon_DropDown.style.display = 'none';
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
+					//HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				}
 			}
 			else if (clicked_element === Header_Messages_Icon || clicked_element_parent === Header_Messages_Icon){
@@ -138,12 +138,12 @@ var Layout = new function () {
 					Header_Messages_Icon_DropDown.style.display = 'none';
 				}
 				else if (display_status === 'none') {
-					Header_Messages_Icon_DropDown.style.display = 'block';
 					Header_User_Account_Menu_Icon_DropDown.style.display = 'none';
+					Header_Messages_Icon_DropDown.style.display = 'block';
 					Header_Notification_Icon_DropDown.style.display = 'none';
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
+					//HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				}
 			}
 			else if (clicked_element === Header_Notification_Icon || clicked_element_parent === Header_Notification_Icon){
@@ -152,12 +152,12 @@ var Layout = new function () {
 					Header_Notification_Icon_DropDown.style.display = 'none';
 				}
 				else if (display_status === 'none') {
-					Header_Notification_Icon_DropDown.style.display = 'block';
 					Header_User_Account_Menu_Icon_DropDown.style.display = 'none';
 					Header_Messages_Icon_DropDown.style.display = 'none';
+					Header_Notification_Icon_DropDown.style.display = 'block';
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
+					//HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				}
 			}
 			else if (clicked_element === HeaderResponsive_Left_Navigation_Menu_Icon || clicked_element_parent === HeaderResponsive_Left_Navigation_Menu_Icon){
@@ -166,12 +166,12 @@ var Layout = new function () {
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 				}
 				else if (display_status === 'none') {
-					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'block';
 					Header_User_Account_Menu_Icon_DropDown.style.display = 'none';
 					Header_Messages_Icon_DropDown.style.display = 'none';
 					Header_Notification_Icon_DropDown.style.display = 'none';
+					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'block';
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
+					//HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				}
 			}
 			else if (clicked_element === HeaderResponsive_Right_Navigation_Menu_Icon || clicked_element_parent === HeaderResponsive_Right_Navigation_Menu_Icon){
@@ -180,35 +180,35 @@ var Layout = new function () {
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 				}
 				else if (display_status === 'none') {
-					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'block';
 					Header_User_Account_Menu_Icon_DropDown.style.display = 'none';
 					Header_Messages_Icon_DropDown.style.display = 'none';
 					Header_Notification_Icon_DropDown.style.display = 'none';
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
+					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'block';
+					//HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				}
 			}
-			else if (clicked_element === HeaderResponsive_User_Account_Menu_Icon || clicked_element_parent === HeaderResponsive_User_Account_Menu_Icon){
+			/*else if (clicked_element === HeaderResponsive_User_Account_Menu_Icon || clicked_element_parent === HeaderResponsive_User_Account_Menu_Icon){
 				var display_status = context.getComputedStyle(HeaderResponsive_User_Account_Menu_Icon_DropDown, 'display');
 				if (display_status === 'block') {
 					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				}
 				else if (display_status === 'none') {
-					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'block';
 					Header_User_Account_Menu_Icon_DropDown.style.display = 'none';
 					Header_Messages_Icon_DropDown.style.display = 'none';
 					Header_Notification_Icon_DropDown.style.display = 'none';
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
+					//HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'block';
 				}
-			}
+			}*/
 			else {
 				Header_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				Header_Messages_Icon_DropDown.style.display = 'none';
 				Header_Notification_Icon_DropDown.style.display = 'none';
 				HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 				HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-				HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
+				//HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 			}
 		};
     };
