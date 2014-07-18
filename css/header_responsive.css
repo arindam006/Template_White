@@ -1,5 +1,8 @@
 @media only screen and (max-width: 960px) {
 
+.header {
+    position:static;
+}
 .header .header_logo_container {
 	padding-left: 15px;
 }
