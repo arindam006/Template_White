@@ -108,11 +108,11 @@
 }
 .header .header_account_container .nav li.user_account_menu_icon div.user_account_dropdown {
 	position: absolute;
-	margin: 25px -60px;
+	margin: 25px -90px;
 	border: 2px solid #4189CD;
 	background: #FFFFFF;
 	z-index: 10;
-	width: 150px;
+	width: 180px;
 	display: none;
 }
 /* Triggered by JavaScript, remove block comments below if JavaScript is not being used */
