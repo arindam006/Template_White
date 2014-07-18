@@ -17,7 +17,10 @@ var Layout = new function () {
 	context.userAgentHeader = navigator.userAgent;
 	context.systemLanguage = navigator.systemLanguage;
 	context.deviceType = "";
+	context.body_innerHTML = "";
+	context.unsupportedLayoutFlag = false;
 	
+	context.MSG_HINT = "<p class=\"center\">JavaScript Error :";
 	context.MSG_GO_BCAK_OR_RETRY = "<br/>Go <a href='' onclick='javascript:window.history.back();'>back</a> or <a href='' onclick='javascript:window.location = document.URL;'>retry</a>.";
 	context.MSG_LAYOUT_REG_FAILED = "JavaScript Error : Layout registration failed.";
 	context.MSG_LAYOUT_UNSUPPORTED = "JavaScript Error : This Layout doesn't support any screen width less than 480px.";
@@ -56,17 +59,33 @@ var Layout = new function () {
 		//console.log("context.deviceType - " + context.deviceType);
 		//console.log("context.width - " + context.width);
 		//console.log("context.height - " + context.height);
-		//console.log("_______________________________________________________");
 		
+		console.log(context.body_innerHTML.startsWith(context.MSG_HINT));
 		if (typeof context.pageUrl === 'undefined' || context.pageUrl === null || context.pageUrl === "") {
-			document.body.innerHTML = "<p class='center'>" + context.MSG_LAYOUT_REG_FAILED + context.MSG_GO_BCAK_OR_RETRY + "</p>";
+			if (!context.unsupportedLayoutFlag) {
+				context.body_innerHTML = document.body.innerHTML;
+				context.unsupportedLayoutFlag = true;
+			}
+			document.body.innerHTML = "<p class=\"center\">" + context.MSG_LAYOUT_REG_FAILED + context.MSG_GO_BCAK_OR_RETRY + "</p>";
 		}
 		else if (context.width < context.responsiveWidth) {
-			if (context.height > context.responsiveWidth){ 
-				document.body.innerHTML = "<p class='center'>" + context.MSG_LAYOUT_UNSUPPORTED_FLIP + context.MSG_GO_BCAK_OR_RETRY + "</p>";
+			if (!context.unsupportedLayoutFlag) {
+				context.body_innerHTML = document.body.innerHTML;
+				context.unsupportedLayoutFlag = true;
+			}
+			if (context.height > context.responsiveWidth){
+				document.body.innerHTML = "<p class=\"center\">" + context.MSG_LAYOUT_UNSUPPORTED_FLIP + context.MSG_GO_BCAK_OR_RETRY + "</p>";
 			}
 			else{
-				document.body.innerHTML = "<p class='center'>" + context.MSG_LAYOUT_UNSUPPORTED + context.MSG_GO_BCAK_OR_RETRY + "</p>";
+				document.body.innerHTML = "<p class=\"center\">" + context.MSG_LAYOUT_UNSUPPORTED + context.MSG_GO_BCAK_OR_RETRY + "</p>";
+			}
+		}
+		else if(context.width >= context.responsiveWidth){
+			//console.log("**context.body_innerHTML - " + context.body_innerHTML);
+			if (context.unsupportedLayoutFlag) {
+				console.log("bingo..");
+				document.body.innerHTML = context.body_innerHTML;
+				context.unsupportedLayoutFlag = false;
 			}
 		}
 	};
