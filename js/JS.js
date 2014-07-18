@@ -26,7 +26,7 @@ if (!String.prototype.format) {
  * console.log(data.startsWith(input)); // false
  */
 if (!String.prototype.startsWith) {
-  String.prototype.startsWith = function() {
+  String.prototype.startsWith = function(str) {
     return this.indexOf(str) == 0;
   };
 }
@@ -41,7 +41,7 @@ if (!String.prototype.startsWith) {
  * console.log(data.endsWith(input)); // false
  */
 if (!String.prototype.endsWith) {
-  String.prototype.endsWith = function( str ) {
+  String.prototype.endsWith = function(str) {
     return this.substring( this.length - str.length, this.length ) === str;
   }
 };
