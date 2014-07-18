@@ -51,12 +51,8 @@ var Layout = new function () {
 		console.log("context.width - " + context.width);
 		console.log("context.height - " + context.height);
 		console.log("_______________________________________________________");
-		console.log("(context.width < context.responsiveWidth)");
-		console.log((context.width < context.responsiveWidth));
-		console.log();
-		console.log();
-		console.log();
-		console.log();
+		//console.log("(context.width < context.responsiveWidth)");
+		//console.log((context.width < context.responsiveWidth));
 		console.log("_______________________________________________________");
 		
 		if (typeof context.pageUrl === 'undefined' || context.pageUrl === null || context.pageUrl === "") {
@@ -91,42 +87,39 @@ var Layout = new function () {
         if(typeof url !== "undefined" || url !== "") context.pageUrl = url;
     };
     context.SetDropDownMenuItems = function () {
-		var Header_User_Account_Menu_Icon = context.getElementByCssSelector(context.Header_User_Account_Menu_Icon);
-		var Header_User_Account_Menu_Icon_DropDown = context.getElementByCssSelector(context.Header_User_Account_Menu_Icon_DropDown);
-		
-		var Header_Messages_Icon = context.getElementByCssSelector(context.Header_Messages_Icon);
-		var Header_Messages_Icon_DropDown = context.getElementByCssSelector(context.Header_Messages_Icon_DropDown);
-		
-		Header_User_Account_Menu_Icon.onclick = function () {
-			var display_status = context.getComputedStyle(Header_User_Account_Menu_Icon_DropDown, 'display');
-			if(display_status === 'block') {
+		document.body.onclick = function (e) {
+			var clicked_element = e.target;
+			var clicked_element_parent = clicked_element.parentNode;
+			
+			var Header_User_Account_Menu_Icon = context.getElementByCssSelector(context.Header_User_Account_Menu_Icon);
+			var Header_User_Account_Menu_Icon_DropDown = context.getElementByCssSelector(context.Header_User_Account_Menu_Icon_DropDown);
+			
+			var Header_Messages_Icon = context.getElementByCssSelector(context.Header_Messages_Icon);
+			var Header_Messages_Icon_DropDown = context.getElementByCssSelector(context.Header_Messages_Icon_DropDown);
+			
+			if (clicked_element === Header_User_Account_Menu_Icon || clicked_element_parent === Header_User_Account_Menu_Icon){
+				var display_status = context.getComputedStyle(Header_User_Account_Menu_Icon_DropDown, 'display');
+				if (display_status === 'block') {
+					Header_User_Account_Menu_Icon_DropDown.style.display = 'none';
+				}
+				else if (display_status === 'none') {
+					Header_User_Account_Menu_Icon_DropDown.style.display = 'block';
+				}
+			}
+			else if (clicked_element === Header_Messages_Icon || clicked_element_parent === Header_Messages_Icon){
+				var display_status = context.getComputedStyle(Header_Messages_Icon_DropDown, 'display');
+				if (display_status === 'block') {
+					Header_Messages_Icon_DropDown.style.display = 'none';
+				}
+				else if (display_status === 'none') {
+					Header_Messages_Icon_DropDown.style.display = 'block';
+				}
+			}
+			else {
 				Header_User_Account_Menu_Icon_DropDown.style.display = 'none';
-			}
-			else if(display_status === 'none') {
-				Header_User_Account_Menu_Icon_DropDown.style.display = 'block';
-			}
-		};
-		
-		Header_Messages_Icon.onclick = function () {
-			var display_status = context.getComputedStyle(Header_Messages_Icon_DropDown, 'display');
-			if(display_status === 'block') {
 				Header_Messages_Icon_DropDown.style.display = 'none';
 			}
-			else if(display_status === 'none') {
-				Header_Messages_Icon_DropDown.style.display = 'block';
-			}
 		};
-		
-		Header_Messages_Icon.onclick = function () {
-			var display_status = context.getComputedStyle(Header_Messages_Icon_DropDown, 'display');
-			if(display_status === 'block') {
-				Header_Messages_Icon_DropDown.style.display = 'none';
-			}
-			else if(display_status === 'none') {
-				Header_Messages_Icon_DropDown.style.display = 'block';
-			}
-		};
-		//Header_Messages_Link_DropDown
     };
     
     // getters
