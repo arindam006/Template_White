@@ -36,7 +36,8 @@ var Layout = new function () {
 	context.HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown = "#header > div > div.mob_sub_menu_icon > div.sub_menu_dropdown";
 	context.HeaderResponsive_Right_Navigation_Menu_Icon = "#header > div > div.header_account_container > ul > li.mob_main_menu_icon";
 	context.HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown = "#header > div > div.header_account_container > ul > li.mob_main_menu_icon > div";
-	context.HeaderResponsive_User_Account_Menu_Icon = "#header > div > div.header_account_container > ul > li.user_account_menu_icon";
+	//context.HeaderResponsive_User_Account_Menu_Icon = "#header > div > div.header_account_container > ul > li.user_account_menu_icon"; //this selector isn't working
+	context.HeaderResponsive_User_Account_Menu_Icon = "#header > div > div.header_account_container > ul > li.user_account_menu_icon > a.link.mobile_link";
 	context.HeaderResponsive_User_Account_Menu_Icon_DropDown = "#header > div > div.header_account_container > ul > li.user_account_menu_icon > div.user_account_dropdown";
 	
 	
@@ -129,7 +130,7 @@ var Layout = new function () {
 					Header_Notification_Icon_DropDown.style.display = 'none';
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-					//HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
+					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				}
 			}
 			else if (clicked_element === Header_Messages_Icon || clicked_element_parent === Header_Messages_Icon){
@@ -143,7 +144,7 @@ var Layout = new function () {
 					Header_Notification_Icon_DropDown.style.display = 'none';
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-					//HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
+					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				}
 			}
 			else if (clicked_element === Header_Notification_Icon || clicked_element_parent === Header_Notification_Icon){
@@ -157,7 +158,7 @@ var Layout = new function () {
 					Header_Notification_Icon_DropDown.style.display = 'block';
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-					//HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
+					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				}
 			}
 			else if (clicked_element === HeaderResponsive_Left_Navigation_Menu_Icon || clicked_element_parent === HeaderResponsive_Left_Navigation_Menu_Icon){
@@ -171,7 +172,7 @@ var Layout = new function () {
 					Header_Notification_Icon_DropDown.style.display = 'none';
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'block';
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-					//HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
+					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				}
 			}
 			else if (clicked_element === HeaderResponsive_Right_Navigation_Menu_Icon || clicked_element_parent === HeaderResponsive_Right_Navigation_Menu_Icon){
@@ -185,10 +186,11 @@ var Layout = new function () {
 					Header_Notification_Icon_DropDown.style.display = 'none';
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'block';
-					//HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
+					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				}
 			}
-			/*else if (clicked_element === HeaderResponsive_User_Account_Menu_Icon || clicked_element_parent === HeaderResponsive_User_Account_Menu_Icon){
+			else if (clicked_element === HeaderResponsive_User_Account_Menu_Icon || clicked_element_parent === HeaderResponsive_User_Account_Menu_Icon){
+				console.log('bingo..........');
 				var display_status = context.getComputedStyle(HeaderResponsive_User_Account_Menu_Icon_DropDown, 'display');
 				if (display_status === 'block') {
 					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
@@ -199,16 +201,16 @@ var Layout = new function () {
 					Header_Notification_Icon_DropDown.style.display = 'none';
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-					//HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'block';
+					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'block';
 				}
-			}*/
+			}
 			else {
 				Header_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				Header_Messages_Icon_DropDown.style.display = 'none';
 				Header_Notification_Icon_DropDown.style.display = 'none';
 				HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 				HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-				//HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
+				HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 			}
 		};
     };
