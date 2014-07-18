@@ -24,12 +24,14 @@ var Layout = new function () {
 	context.MSG_LAYOUT_UNSUPPORTED_FLIP = context.MSG_LAYOUT_UNSUPPORTED + " If your device alows you, then flip the screen to get the display back.";
 	
 	//css paths are taken with chrome > inspect element > right-click on element > copy css path
-	context.Header_User_Account_Menu_Icon = "#header > div > div.header_account_container > ul > li.user_account_menu_icon";
-	context.Header_User_Account_Menu_Icon_DropDown = "#header > div > div.header_account_container > ul > li.user_account_menu_icon > div.user_account_dropdown";
+	context.Header_HeaderResponsive_User_Account_Menu_Icon = "#header > div > div.header_account_container > ul > li.user_account_menu_icon";
+	context.Header_HeaderResponsive_User_Account_Menu_Icon_DropDown = "#header > div > div.header_account_container > ul > li.user_account_menu_icon > div.user_account_dropdown";
 	context.Header_Messages_Icon = "#header > div > div.header_account_container > ul > li.notification > a.link.messages_link";
 	context.Header_Messages_Icon_DropDown = "#header > div > div.header_account_container > ul > li.notification > div.messages_dropdown";
+	//context.Header_Notification_Icon = "#header > div > div.header_account_container > ul > li.notification > a.link.notification_link";
+	//context.Header_Notification_Icon_Dropdown = "#header > div > div.header_account_container > ul > li.notification > div.notification_dropdown";
 	context.Header_Notification_Icon = "#header > div > div.header_account_container > ul > li.notification > a.link.notification_link";
-	context.Header_Notification_Icon_Dropdown = "#header > div > div.header_account_container > ul > li.notification > div.notification_dropdown";
+	context.Header_Notification_Icon_DropDown = "#header > div > div.header_account_container > ul > li.notification > div.notification_dropdown";
 	context.HeaderResponsive_Left_Navigation_Menu_Icon = "#header > div > div.mob_sub_menu_icon";
 	context.HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown = "#header > div > div.mob_sub_menu_icon > div.sub_menu_dropdown";
 	context.HeaderResponsive_Right_Navigation_Menu_Icon = "#header > div > div.header_account_container > ul > li.mob_main_menu_icon";
@@ -99,8 +101,8 @@ var Layout = new function () {
 			var clicked_element = e.target;
 			var clicked_element_parent = clicked_element.parentNode;
 			
-			var Header_User_Account_Menu_Icon = context.getElementByCssSelector(context.Header_User_Account_Menu_Icon);
-			var Header_User_Account_Menu_Icon_DropDown = context.getElementByCssSelector(context.Header_User_Account_Menu_Icon_DropDown);
+			var Header_HeaderResponsive_User_Account_Menu_Icon = context.getElementByCssSelector(context.Header_HeaderResponsive_User_Account_Menu_Icon);
+			var Header_HeaderResponsive_User_Account_Menu_Icon_DropDown = context.getElementByCssSelector(context.Header_HeaderResponsive_User_Account_Menu_Icon_DropDown);
 			
 			var Header_Messages_Icon = context.getElementByCssSelector(context.Header_Messages_Icon);
 			var Header_Messages_Icon_DropDown = context.getElementByCssSelector(context.Header_Messages_Icon_DropDown);
@@ -114,21 +116,17 @@ var Layout = new function () {
 			var HeaderResponsive_Right_Navigation_Menu_Icon = context.getElementByCssSelector(context.HeaderResponsive_Right_Navigation_Menu_Icon);
 			var HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown = context.getElementByCssSelector(context.HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown);
 			
-			var HeaderResponsive_User_Account_Menu_Icon = context.getElementByCssSelector(context.HeaderResponsive_User_Account_Menu_Icon);
-			var HeaderResponsive_User_Account_Menu_Icon_DropDown = context.getElementByCssSelector(context.HeaderResponsive_User_Account_Menu_Icon_DropDown);
-			
-			if (clicked_element === Header_User_Account_Menu_Icon || clicked_element_parent === Header_User_Account_Menu_Icon){
-				var display_status = context.getComputedStyle(Header_User_Account_Menu_Icon_DropDown, 'display');
+			if (clicked_element === Header_HeaderResponsive_User_Account_Menu_Icon || clicked_element_parent === Header_HeaderResponsive_User_Account_Menu_Icon || clicked_element_parent.parentNode === Header_HeaderResponsive_User_Account_Menu_Icon){
+				var display_status = context.getComputedStyle(Header_HeaderResponsive_User_Account_Menu_Icon_DropDown, 'display');
 				if (display_status === 'block') {
-					Header_User_Account_Menu_Icon_DropDown.style.display = 'none';
+					Header_HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				}
 				else if (display_status === 'none') {
-					Header_User_Account_Menu_Icon_DropDown.style.display = 'block';
+					Header_HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'block';
 					Header_Messages_Icon_DropDown.style.display = 'none';
 					Header_Notification_Icon_DropDown.style.display = 'none';
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				}
 			}
 			else if (clicked_element === Header_Messages_Icon || clicked_element_parent === Header_Messages_Icon){
@@ -137,12 +135,11 @@ var Layout = new function () {
 					Header_Messages_Icon_DropDown.style.display = 'none';
 				}
 				else if (display_status === 'none') {
-					Header_User_Account_Menu_Icon_DropDown.style.display = 'none';
+					Header_HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 					Header_Messages_Icon_DropDown.style.display = 'block';
 					Header_Notification_Icon_DropDown.style.display = 'none';
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				}
 			}
 			else if (clicked_element === Header_Notification_Icon || clicked_element_parent === Header_Notification_Icon){
@@ -151,12 +148,11 @@ var Layout = new function () {
 					Header_Notification_Icon_DropDown.style.display = 'none';
 				}
 				else if (display_status === 'none') {
-					Header_User_Account_Menu_Icon_DropDown.style.display = 'none';
+					Header_HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 					Header_Messages_Icon_DropDown.style.display = 'none';
 					Header_Notification_Icon_DropDown.style.display = 'block';
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				}
 			}
 			else if (clicked_element === HeaderResponsive_Left_Navigation_Menu_Icon || clicked_element_parent === HeaderResponsive_Left_Navigation_Menu_Icon){
@@ -165,12 +161,11 @@ var Layout = new function () {
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 				}
 				else if (display_status === 'none') {
-					Header_User_Account_Menu_Icon_DropDown.style.display = 'none';
+					Header_HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 					Header_Messages_Icon_DropDown.style.display = 'none';
 					Header_Notification_Icon_DropDown.style.display = 'none';
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'block';
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				}
 			}
 			else if (clicked_element === HeaderResponsive_Right_Navigation_Menu_Icon || clicked_element_parent === HeaderResponsive_Right_Navigation_Menu_Icon){
@@ -179,36 +174,19 @@ var Layout = new function () {
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 				}
 				else if (display_status === 'none') {
-					Header_User_Account_Menu_Icon_DropDown.style.display = 'none';
+					Header_HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 					Header_Messages_Icon_DropDown.style.display = 'none';
 					Header_Notification_Icon_DropDown.style.display = 'none';
 					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'block';
-					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
-				}
-			}
-			else if (clicked_element === HeaderResponsive_User_Account_Menu_Icon || clicked_element_parent === HeaderResponsive_User_Account_Menu_Icon){
-				console.log('bingo..........');
-				var display_status = context.getComputedStyle(HeaderResponsive_User_Account_Menu_Icon_DropDown, 'display');
-				if (display_status === 'block') {
-					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
-				}
-				else if (display_status === 'none') {
-					Header_User_Account_Menu_Icon_DropDown.style.display = 'none';
-					Header_Messages_Icon_DropDown.style.display = 'none';
-					Header_Notification_Icon_DropDown.style.display = 'none';
-					HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-					HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-					HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'block';
 				}
 			}
 			else {
-				Header_User_Account_Menu_Icon_DropDown.style.display = 'none';
+				Header_HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 				Header_Messages_Icon_DropDown.style.display = 'none';
 				Header_Notification_Icon_DropDown.style.display = 'none';
 				HeaderResponsive_Left_Navigation_Menu_Icon_Dropdown.style.display = 'none';
 				HeaderResponsive_Right_Navigation_Menu_Icon_Dropdown.style.display = 'none';
-				HeaderResponsive_User_Account_Menu_Icon_DropDown.style.display = 'none';
 			}
 		};
     };
