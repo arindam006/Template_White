@@ -80,6 +80,19 @@
 /*.header .header_account_container .nav li.notification a.notification_link:hover + div.notification_dropdown {
 	display: block;
 }*/
+.header .header_account_container .nav li.notification div.notification_dropdown div {
+	padding: 8px;
+	color: #598ABF;
+	border-bottom: 1px dotted #4189CD;
+}
+.header .header_account_container .nav li.notification div.notification_dropdown div:hover {
+	padding: 8px;
+	color: #5A6FC0;
+	background: #DADADB;
+	cursor: pointer;
+	border-bottom: 1px solid #4189CD;
+	font-weight: bolder;
+}
 .header .header_account_container .nav li.notification div.messages_dropdown {
 	position: absolute;
 	margin: 25px 0;
@@ -94,6 +107,19 @@
 /*.header .header_account_container .nav li.notification a.messages_link:hover + div.messages_dropdown {
 	display: block;
 }*/
+.header .header_account_container .nav li.notification div.messages_dropdown div {
+	padding: 8px;
+	color: #598ABF;
+	border-bottom: 1px dotted #4189CD;
+}
+.header .header_account_container .nav li.notification div.messages_dropdown div:hover {
+	padding: 8px;
+	color: #5A6FC0;
+	background: #DADADB;
+	cursor: pointer;
+	border-bottom: 1px solid #4189CD;
+	font-weight: bolder;
+}
 .header .header_account_container .nav li.user_account_menu_icon {
     display: inline-block;
 	padding: 0 15px 0 0;
@@ -119,7 +145,22 @@
 /*.header .header_account_container .nav li.user_account_menu_icon:hover > div.user_account_dropdown {
 	display: block;
 */
-
+.header .header_account_container .nav li.user_account_menu_icon div.user_account_dropdown div {
+	padding: 8px;
+	color: #598ABF;
+	border-bottom: 1px dotted #4189CD;
+}
+.header .header_account_container .nav li.user_account_menu_icon div.user_account_dropdown div.logout {
+	font-weight: bold;
+}
+.header .header_account_container .nav li.user_account_menu_icon div.user_account_dropdown div:hover {
+	padding: 8px;
+	color: #5A6FC0;
+	background: #DADADB;
+	cursor: pointer;
+	border-bottom: 1px solid #4189CD;
+	font-weight: bolder;
+}
 .header .header_account_container .nav li .link {
     float: left;
     margin: 0;

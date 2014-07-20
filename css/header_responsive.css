@@ -28,6 +28,20 @@
 /*.header div.mob_sub_menu_icon:hover > div.sub_menu_dropdown {
 	display: block;
 }*/
+.header div.mob_sub_menu_icon div.sub_menu_dropdown li {
+	padding: 8px;
+	color: #598ABF;
+	border-bottom: 1px dotted #4189CD;
+}
+.header div.mob_sub_menu_icon div.sub_menu_dropdown li:hover {
+	padding: 8px;
+	color: #5A6FC0;
+	background: #DADADB;
+	cursor: pointer;
+	border-bottom: 1px solid #4189CD;
+	font-weight: bolder;
+	margin: 0 0 0 -28px;
+}
 .header div.mob_sub_menu_icon {
 	width: 24px;
 	margin-top: 5px;
@@ -77,5 +91,20 @@
 /*.header .header_account_container .nav li.mob_main_menu_icon:hover > div.main_menu_mobile_dropdown {
 	display: block;
 }*/
+.header .header_account_container .nav li.mob_main_menu_icon div.main_menu_mobile_dropdown li {
+	padding: 8px;
+	color: #598ABF;
+	border-bottom: 1px dotted #4189CD;
+	width: 100%;
+	margin: 0 0 0 -28px;
+}
+.header .header_account_container .nav li.mob_main_menu_icon div.main_menu_mobile_dropdown li:hover {
+	padding: 8px;
+	color: #5A6FC0;
+	background: #DADADB;
+	cursor: pointer;
+	border-bottom: 1px solid #4189CD;
+	font-weight: bolder;
+}
 
 }
